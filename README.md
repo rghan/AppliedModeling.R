@@ -1,17 +1,17 @@
 # Applied Predictive Modeling - R code examples
 
-This is a collection of exercises that correspond to various chapters in [Applied Predictive Modeling](https://www.springer.com/statistics/life+sciences,+medicine+%26+health/book/978-1-4614-6848-6) by Max Kuhn and Kjell Johnson.
+This is a collection of exercises adapted from [Applied Predictive Modeling](https://www.springer.com/statistics/life+sciences,+medicine+%26+health/book/978-1-4614-6848-6) by Max Kuhn and Kjell Johnson.
 
-Each chapter will be illustrated in various scripts that are contained within the local applied.predictive.modeling_R.Rproj.
+I work through various exercises, but apply some alterations to the original code. Here, I try to use some newer R packages to more easily work with data. This was done so that I can better learn modeling, Rmarkdown and git/github.
 
 ---
-## Chapter Computing
-* **Chapter 3** Data Pre-processing
+## Working with data using applied modeling
+* **Data Pre-processing**
   * *Transformations*
   * *Filtering*
   * *Creating Dummy Variables*
   * *Exercises*
-* **Chapter 4** Over-Fitting and Model Tuning
+* **Over-Fitting and Model Tuning**
   * *Data Splitting*
   * *Resampling*
   * *Basic Model Building in* **R**

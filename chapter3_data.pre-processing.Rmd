@@ -13,10 +13,19 @@ Load the data set into **R**:
 library(AppliedPredictiveModeling)
 data(segmentationOriginal)
 ```
+```{r}
+segmentationOriginal <- tbl_df(segmentationOriginal)
+## Retain only the 'training' set
+library(dplyr)
+segTrain <- filter(segmentationOriginal, Case == "Train")
+## Remove the first three columns (identifier columns)
+segTrainX <- select(segTrain, -(1:3))
+segTrainClass <- segTrain$Class
+```
 
 ## *Transformations*
 
 ## R and package versions used
-```{r session.info}
+```{r session.info, results=TRUE}
 sessionInfo()
 ```
