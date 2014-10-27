@@ -6,8 +6,15 @@ Each chapter will be illustrated in various scripts that are contained within th
 
 ---
 ## Chapter Computing
-1. **Chapter 3** Data Pre-processing
+* **Chapter 3** Data Pre-processing
   * *Transformations*
   * *Filtering*
   * *Creating Dummy Variables*
+  * *Exercises*
+* **Chapter 4** Over-Fitting and Model Tuning
+  * *Data Splitting*
+  * *Resampling*
+  * *Basic Model Building in* **R**
+  * *Determination of Tuning Parameters*
+  * *Between-Model Comparisons*
   * *Exercises*
