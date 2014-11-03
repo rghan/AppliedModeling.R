@@ -63,17 +63,22 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="getting-started" class="section level2">
 <h2>Getting started</h2>
 <p>Load the necessary libraries and data set into <strong>R</strong>:</p>
-<pre class="r"><code>library(AppliedPredictiveModeling)
+<pre><code>```r
+library(AppliedPredictiveModeling)
 library(dplyr)
-## Load the 
+## Load the raw cell segmentation data
 data(segmentationOriginal)
-segmentationOriginal &lt;- tbl_df(segmentationOriginal)</code></pre>
+segmentationOriginal &lt;- tbl_df(segmentationOriginal)
+```</code></pre>
+<p>The data set includes both training and test sets, but the analysis for this chapter focused only upon the training set. #```{r head.data, }</p>
 <p>Make some adjustments to the data.</p>
-<pre class="r"><code>## Retain only the 'training' set
+<pre><code>```r
+## Retain only the 'training' set
 segTrain &lt;- filter(segmentationOriginal, Case == &quot;Train&quot;)
 ## Remove the first three columns (identifier columns)
 segTrainX &lt;- select(segTrain, -(1:3))
-segTrainClass &lt;- segTrain$Class</code></pre>
+segTrainClass &lt;- segTrain$Class
+```</code></pre>
 <hr />
 <div id="transformations" class="section level3">
 <h3><em>Transformations</em></h3>

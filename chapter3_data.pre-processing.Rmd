@@ -2,28 +2,32 @@
 title: "Data Pre-processing"
 author: "Ryan Ghan"
 date: "October 27, 2014"
-output: html_document
+output: pdf_document
 ---
 
 This section uses data from the `AppliedPredictiveModeling` package and functions from the `caret`, `corrplot`, `dplyr` and `lattice` packages.
 
 ## Getting started
 Load the necessary libraries and data set into **R**:
-```{r load.package.data, message=FALSE}
-library(AppliedPredictiveModeling)
-library(dplyr)
-## Load the 
-data(segmentationOriginal)
-segmentationOriginal <- tbl_df(segmentationOriginal)
-```
+    ```{r load.package.data, message=FALSE}
+    library(AppliedPredictiveModeling)
+    library(dplyr)
+    ## Load the raw cell segmentation data
+    data(segmentationOriginal)
+    segmentationOriginal <- tbl_df(segmentationOriginal)
+    ```
+The data set includes both training and test sets, but the analysis for this 
+chapter focused only upon the training set.
+#```{r head.data, }
+
 Make some adjustments to the data.
-```{r}
-## Retain only the 'training' set
-segTrain <- filter(segmentationOriginal, Case == "Train")
-## Remove the first three columns (identifier columns)
-segTrainX <- select(segTrain, -(1:3))
-segTrainClass <- segTrain$Class
-```
+    ```{r}
+    ## Retain only the 'training' set
+    segTrain <- filter(segmentationOriginal, Case == "Train")
+    ## Remove the first three columns (identifier columns)
+    segTrainX <- select(segTrain, -(1:3))
+    segTrainClass <- segTrain$Class
+    ```
 ___
 ### *Transformations*
 
@@ -67,6 +71,6 @@ ___
 
 ___
 ### R and package versions used
-```{r}
+```{r session.info,eval=TRUE}
 sessionInfo()
 ```
